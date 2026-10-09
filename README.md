@@ -8,4 +8,5 @@
 ## Описание лаб
 - [lab1_car_cost_oil](./lab1_car_cost_oil) — расчёт стоимости топлива
 - [lab2_xy_decart_float](./lab2_xy_decart_float) — координатные зоны
+- [lab2_name_stars](./lab2_name_stars) - вывод имени звездами без пробелов в коде
 - [lab3_math_cycles](./lab3_math_cycles) — циклы
