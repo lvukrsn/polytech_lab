@@ -3,5 +3,5 @@
 Требования - git, cpp, visual studio
 ## Автор
 
-- **lvukrsn** — [github.com/lvukrsn](https://github.com/lvukrsn)
-- tg - [t.me/lvukrsn](https://t.me/lvukrsn)
+- **github** — [github.com/lvukrsn](https://github.com/lvukrsn)
+- **tg** - [t.me/lvukrsn](https://t.me/lvukrsn)
