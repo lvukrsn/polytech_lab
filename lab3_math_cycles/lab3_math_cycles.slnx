@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="lab3_math_cycles/lab3_math_cycles.vcxproj" Id="0dd699dc-f363-45ae-ab0e-9a6f202234a7" />
+</Solution>
