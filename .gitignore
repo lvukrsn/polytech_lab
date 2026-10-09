@@ -1,0 +1,32 @@
+# Build output
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+*.sln.docstates
+
+# Compiled files
+*.exe
+*.o
+*.obj
+*.pdb
+*.ilk
+*.dll
+*.lib
+
+# CMake (если используешь)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# IDE
+.idea/
+.vscode/
