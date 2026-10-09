@@ -11,7 +11,7 @@ int main()
     cout << "введите х ";
     cin >> x;
 	if (fabs(x) >= 1) {
-		cout << "введите х от 0 до 1";
+		cout << "введите х СТРОГО 0 < x < 1";
 		return 0;
 	}
 	float prec = 0.0001;
