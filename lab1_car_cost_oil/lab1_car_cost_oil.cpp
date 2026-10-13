@@ -1,7 +1,6 @@
 ﻿#include<iostream>
 #include<locale>
 
-using namespace std; //чтобы не писать std:: перед cout и cin
 int main() {
 	setlocale(LC_ALL, "RUS"); // для кириллицы в консоли
     float distance, consumption, price; //init переменные
