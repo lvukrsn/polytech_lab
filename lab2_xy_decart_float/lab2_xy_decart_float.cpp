@@ -64,7 +64,7 @@ int main() {
         cout << "Зона 17\n";
     }
     else if (x * x + y * y <= 4 && x <= 0 && y > 0 && y <= -x + 1 && y > x * x - 1) {
-        cout<<"Зона 18\n";
+        cout << "Зона 18\n";
     }
     else if (x * x + y * y <= 4 && x <= 0 && y > 0 && y <= -x + 1 && y <= x * x - 1) {
         cout << "Зона 19\n";
