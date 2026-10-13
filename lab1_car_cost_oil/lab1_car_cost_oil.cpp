@@ -3,7 +3,7 @@
 
 int main() {
 	setlocale(LC_ALL, "RUS"); // для кириллицы в консоли
-    float distance, consumption, price; //init переменные
+    double distance, consumption, price; //init переменные
     printf("Предполагаемое расстояние - "); // ввод distance
     scanf_s("%f", &distance); // считываем значение distance
     printf("Расход бензина - ");
