@@ -2,32 +2,32 @@
 #include <cmath> 
 #include <locale>
 
-using namespace std;
+using namespace std; //чтобы не писать std::
 
 int main()
 {
-	setlocale(LC_ALL, "RUS");
-	float x;
-    cout << "введите х ";
-    cin >> x;
-	if (fabs(x) >= 1) {
+	setlocale(LC_ALL, "RUS");// поддержка кириллицы в консоли
+	float x; // init x
+    cout << "введите х ";// output text to input x
+    cin >> x; // input x
+	if (fabs(x) >= 1) {// проверка на корректность х
 		cout << "введите х СТРОГО 0 < x < 1";
 		return 0;
 	}
-	float prec = 0.0001;
-	float sum = 0;
-	float first = 1;
-	int n = 0;
-	while (fabs(first) >= prec) {
-		sum += first;
-		first *= x;
-		n++;
+	float prec = 0.0001; //иниц-ия переменной точности
+	float sum = 0;  //иниц-ия переменной суммы
+	float first = 1; //иниц-ия переменной первого члена
+	int n = 0; //кол-во итераций
+	while (fabs(first) >= prec) { //повторять пока модуль первого члена больше или равен точности
+		sum += first; // добавить первый член к сумме
+		first *= x; // вычислить следующий член
+		n++; //увеличить счетчик итераций
 	}
-	float control = 1.0 / (1.0 - x);
-	cout << "сумма = " << sum << endl;
-	cout << "контроль = " << control << endl;
-	cout << "разница между контрольным и фактическим значениями = " << fabs(sum - control) << endl;
-	cout << "количество членов = " << n << endl;
-	system("pause");
-	return 0;
+	float control = 1.0 / (1.0 - x); //вычисление контрольного значения
+	cout << "сумма = " << sum << endl; //вывод суммы
+	cout << "контроль = " << control << endl;//вывод контрольного значения
+	cout << "разница между контрольным и фактическим значениями = " << fabs(sum - control) << endl; // вывод разницы между контрольным и фактическим значениями
+	cout << "количество членов = " << n << endl; // вывод количества членов
+	system("pause"); // пауза перед выходом из программы
+	return 0; // завершение программы
 }
