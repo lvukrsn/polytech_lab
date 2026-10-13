@@ -11,7 +11,7 @@ int main()
     cout << "введите х ";// output text to input x
     cin >> x; // input x
 	if (fabs(x) >= 1) {// проверка на корректность х
-		cout << "введите х СТРОГО 0 < x < 1";
+		cout << "введите х СТРОГО -1 < x < 1";
 		return 0;
 	}
 	float prec = 0.0001; //иниц-ия переменной точности
