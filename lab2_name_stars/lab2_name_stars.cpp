@@ -3,8 +3,7 @@
 #include<locale>
 using/**/namespace/**/std;
 int/**/main()
-{
-setlocale(LC_ALL,"RUS");
+{setlocale(LC_ALL,"RUS");
 wcout<<setfill(L'*')
 <<setw(5)<<L""<<L"\x20"
 <<setw(5)<<L""<<L"\x20"
@@ -51,5 +50,4 @@ wcout<<setfill(L'*')
 <<setw(5)<<L""<<L"\x20"
 <<setw(1)<<L""<<L"\x20\x20\x20"
 <<setw(1)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\n";
-}
+<<setw(5)<<L""<<L"\n";}
