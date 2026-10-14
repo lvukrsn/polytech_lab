@@ -7,7 +7,7 @@
 - **GitHub** — [github.com/lvukrsn](https://github.com/lvukrsn)
 - **Telegram** - [t.me/lvukrsn](https://t.me/lvukrsn)
 ## Описание лаб
-- [lab1_car_cost_oil](./lab1_car_cost_oil) — расчёт стоимости топлива (через scan_f/printf)
+- [lab1_car_cost_oil](./lab1_car_cost_oil/lab1_car_cost.cpp) — расчёт стоимости топлива (через scan_f/printf)
 - [lab1_car_cost_oil_cin_cout](./lab1_car_cost_oil_cin_cout) — расчёт стоимости топлива (через cin/cout)
 - [lab2_xy_decart_float](./lab2_xy_decart_float) — координатные зоны
 - [lab2_name_stars](./lab2_name_stars) - вывод имени звездами без пробелов в коде
