@@ -4,17 +4,17 @@
 int main()
 {
 	srand(time(0));
-	setlocale(LC_ALL, "RUS"); // для кириллицы в консоли
-	int N; // размер стороны матрицы
+	setlocale(LC_ALL, "RUS");									// для кириллицы в консоли
+	int N;														// размер стороны матрицы
 	std::cout << "введите размер стороны матрицы: ";
 	std::cin >> N;
-	int** matrix = new int* [N]; // создание двумерного массива
+	int** matrix = new int* [N];								// создание двумерного массива
 	for (int i = 0; i < N; i++) {
-		matrix[i] = new int[N]; // создание строк матрицы
+		matrix[i] = new int[N];									// создание строк матрицы
 	}
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			matrix[i][j] = rand() % 10; // заполнение матрицы случайными числами от 0 до 9
+			matrix[i][j] = rand() % 10;							// заполнение матрицы случайными числами от 0 до 9
 		}
 	}
 
@@ -22,23 +22,23 @@ int main()
 	std::cout << "\nИсходная матрица:" << std::endl;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			std::cout << matrix[i][j] << " ";
+			std::cout << matrix[i][j] << " ";					// вывод исходной матрциы
 		}
 		std::cout << std::endl;
 	}
 
 
-	int* maxCols = new int[N]; // массив для хранения максимальных элементов по столбцам
+	int* maxCols = new int[N];									// массив для хранения максимальных элементов по столбцам
 	for (int i = 0;i < N;i++) {
-		int maxVal = matrix[i][0]; // инициализация максимального элемента
+		int maxVal = matrix[i][0];								// инициализация максимального элемента
 		int maxCol = 0;
 		for (int j = 0;j < N;j++) {
-			if (matrix[i][j] > maxVal) {
-				maxVal = matrix[i][j];
+			if (matrix[i][j] > maxVal) {						
+				maxVal = matrix[i][j];							// запись макс знач каждого столбца
 				maxCol = j;
 			}
 		}
-		maxCols[i] = maxCol; // сохранение индекса столбца с максимальным элементом
+		maxCols[i] = maxCol;									// сохранение индекса столбца с максимальным элементом
 	}
 	int* minRows = new int[N];
 	for (int j = 0;j < N;j++) {
@@ -52,19 +52,19 @@ int main()
 		}
 		minRows[j] = minRow;
 	}
-	//std::cout << "\nmaxCols --- ";
+	//std::cout << "\nmaxCols --- ";							код отладки - вывод maxCols
 	//for (int i = 0;i < N;i++) {
 	//	std::cout << maxCols[i] << " ";
 	//}
 
-	//std::cout << "\nminRows --- ";
+	//std::cout << "\nminRows --- ";							код отладки - вывод minrows
 	//for (int j = 0; j < N;j++) {
 	//	std::cout << minRows[j] << " ";
 	//}
-	int* minVals = new int[N];
+	int* minVals = new int[N];									//промежуточные переменные minVals и maxRows
 	int* maxVals = new int[N];
 	for (int i = 0;i < N; i++) {
-		minVals[i] = matrix[minRows[i]][i];
+		minVals[i] = matrix[minRows[i]][i];						// замена в исхзодной матрице элементов
 		maxVals[i] = matrix[i][maxCols[i]];
 	}
 	for (int i = 0;i < N;i++) {
@@ -72,16 +72,16 @@ int main()
 		matrix[minRows[i]][i] = matrix[i][maxCols[i]];
 		matrix[i][maxCols[i]] = temp;
 	}
-	std::cout << "\nНовая матрица:" << std::endl;
+	std::cout << "\nНовая матрица:" << std::endl;				
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			std::cout << matrix[i][j] << " ";
+			std::cout << matrix[i][j] << " ";					//вывод новой матрицы
 		}
 		std::cout << std::endl;
 	}
 	for (int i = 0;i < N;i++) {
-		delete[] matrix[i];
+		delete[] matrix[i];										// очистка памяти
 	}
-	delete[] matrix; delete[] maxCols; delete[] minRows;delete[] minVals;delete[] maxVals;
-	return 0;
+	delete[] matrix; delete[] maxCols; delete[] minRows;delete[] minVals;delete[] maxVals;	//очистка памяти
+	return 0;													// return 0 так как программа успешно завергшена
 }
