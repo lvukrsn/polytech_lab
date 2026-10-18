@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="lab5_decart.vcxproj" Id="fc2b2d73-2e54-477e-b47d-6ebe5a927bdf" />
+</Solution>
