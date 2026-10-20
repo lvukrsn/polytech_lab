@@ -6,8 +6,7 @@ int main()
 	srand(time(0));
 	setlocale(LC_ALL, "RUS");									// для кириллицы в консоли
 	int N;														// размер стороны матрицы
-	std::cout << "введите размер стороны матрицы: ";
-	std::cin >> N;
+	std::cout << "введите размер стороны матрицы: "; std::cin >> N; // иниц размера стороны матрицы
 	int** matrix = new int* [N];								// создание двумерного массива
 	for (int i = 0; i < N; i++) {
 		matrix[i] = new int[N];									// создание строк матрицы
@@ -52,12 +51,12 @@ int main()
 		}
 		minRows[j] = minRow;
 	}
-	//std::cout << "\nmaxCols --- ";							код отладки - вывод maxCols
+	//std::cout << "\nmaxCols --- ";							для отладки - вывод maxCols
 	//for (int i = 0;i < N;i++) {
 	//	std::cout << maxCols[i] << " ";
 	//}
 
-	//std::cout << "\nminRows --- ";							код отладки - вывод minrows
+	//std::cout << "\nminRows --- ";							для отладки - вывод minrows
 	//for (int j = 0; j < N;j++) {
 	//	std::cout << minRows[j] << " ";
 	//}
