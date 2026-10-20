@@ -1,17 +1,39 @@
-﻿#include<iostream>
-#include<locale>
+﻿#include <iostream>
+#include <locale>
+#include <iomanip> 
+
+#define swagakruto
+
+using namespace std;
 
 int main() {
-	setlocale(LC_ALL, "RUS"); // для кириллицы в консоли
-    float distance, consumption, price; //init переменные
-    printf("Предполагаемое расстояние - "); // ввод distance
-    scanf_s("%f", &distance); // считываем значение distance
+    setlocale(LC_ALL, "RUS");
+    float distance, consumption, price;
+
+#ifdef swagakruto
+    printf("printf Предполагаемое расстояние - ");
+    scanf_s("%f", &distance);
     printf("Расход бензина - ");
-    scanf_s("%f", &consumption); // считываем значение consumption
+    scanf_s("%f", &consumption);
     printf("Цена бензина - ");
-    scanf_s("%f", &price); // считываем значение price
-    float cost = (distance / 100.0f) * consumption * price; // расчет стоимости
-    printf("Стоимость путешествия при цене бензина %.2f составит %.2f рублей\n", price, cost); //  вывод стоимости
-	system("pause"); //чтобы консоль не закрывалась сразу
-    return 0; // 0, потому что программа завершилась успешно
+    scanf_s("%f", &price);
+
+    float cost = (distance / 100.0f) * consumption * price;
+    printf("Стоимость путешествия при цене бензина %.2f составит %.2f рублей\n", price, cost);
+
+#else
+    cout << "cin cout Предполагаемое расстояние - ";
+    cin >> distance;
+    cout << "Расход бензина - ";
+    cin >> consumption;
+    cout << "Цена бензина - ";
+    cin >> price;
+
+    float cost = (distance / 100.0f) * consumption * price;
+    cout << "Стоимость путешествия при цене бензина "
+        << fixed << setprecision(2) << price
+        << " рублей составит " << cost << " рублей" << endl;
+#endif
+    system("pause");
+    return 0;
 }
