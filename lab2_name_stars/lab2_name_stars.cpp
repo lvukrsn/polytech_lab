@@ -1,53 +1,98 @@
-﻿#include<iostream>
-#include<iomanip>
-#include<locale>
-using/**/namespace/**/std;
-int/**/main()
-{setlocale(LC_ALL,"RUS");
-wcout<<setfill(L'*')
-<<setw(5)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20\x20\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\n";
-wcout<<setfill(L'\x20')
-<<L"*"<<setw(5)<<L""
-<<L"*"<<setw(3)<<L""
-<<L"*"<<setw(1)<<L""
-<<L"*"<<setw(3)<<L""
-<<L"*"<<setw(1)<<L""
-<<L"*"<<setw(5)<<L""
-<<L"**"<<setw(1)<<L""
-<<L"**"<<setw(1)<<L""
-<<L"*"<<setw(4)<<L""<<L"\n";
-wcout<<setfill(L'*')
-<<setw(5)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20\x20\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\n";
-wcout<<setfill(L'\x20')
-<<L"*"<<setw(5)<<L""
-<<L"*"<<setw(1)<<L""
-<<L"*"<<setw(2)<<L""
-<<L"*"<<setw(3)<<L""
-<<L"*"<<setw(1)<<L""
-<<L"*"<<setw(5)<<L""
-<<L"*"<<setw(3)<<L""
-<<L"*"<<setw(5)<<L""
-<<L"*"<<L"\n";
-wcout<<setfill(L'*')
-<<setw(5)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\x20"
-<<setw(1)<<L""<<L"\x20\x20\x20"
-<<setw(1)<<L""<<L"\x20"
-<<setw(5)<<L""<<L"\n";}
+﻿#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    char a = '*';
+
+    // Строка 1
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(2) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(3) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(3) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(2) << a;
+    cout << setw(4) << a;
+    cout << endl;
+
+    // Строка 2
+    cout << setw(1) << a;
+    cout << setw(6) << a;
+    cout << setw(4) << a;
+    cout << setw(2) << a;
+    cout << setw(4) << a;
+    cout << setw(2) << a;
+    cout << setw(6) << a;
+    cout << setw(1) << a;
+    cout << setw(2) << a;
+    cout << setw(1) << a;
+    cout << endl;
+
+    // Строка 3
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(3) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(3) << a;
+    cout << setw(4) << a;
+    cout << setw(2) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(3) << a;
+    cout << setw(2) << a;
+    cout << setw(2) << a;
+    cout << endl;
+
+    // Строка 4
+    cout << setw(1) << a;
+    cout << setw(6) << a;
+    cout << setw(2) << a;
+    cout << setw(4) << a;
+    cout << setw(4) << a;
+    cout << setw(2) << a;
+    cout << setw(6) << a;
+    cout << setw(4) << a;
+    cout << endl;
+
+    // Строка 5
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(2) << a;
+    cout << setw(3) << a;
+    cout << setw(1) << a;
+    cout << setw(2) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(3) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(1) << a;
+    cout << setw(2) << a;
+    cout << setw(4) << a;
+    cout << endl;
+
+    return 0;
+}
