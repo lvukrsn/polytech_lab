@@ -1,16 +1,16 @@
-﻿#include <iostream>
-#include <locale>
-#include <iomanip> 
+﻿#include <iostream>          // подключаем библиотеку стандартного ввода и вывода
+#include <iomanip>           // подключаем библиотеку форматирования вывода для setprecision и прочего
 
-#define swagakruto
+#define swagakruto          // определяем макрос, чтобы включить ветку с printf и scanf
 
-using namespace std;
+using namespace std;         // используем стандартное пространство имён, чтобы писать cout и cin без префикса
 
-int main() {
-    setlocale(LC_ALL, "RUS");
-    float distance, consumption, price;
+int main() {                 // главная функция, точка входа в программу
+    setlocale(LC_ALL, "RUS"); // устанавливаем кириллицу для корректного вывода и ввода
 
-#ifdef swagakruto
+    float distance, consumption, price; // объявляем переменные: расстояние, расход топлива, цена бензина
+
+#ifdef swagakruto            // если макрос swagakruto определён, то компилируется этот блок
     printf("printf Предполагаемое расстояние - ");
     scanf_s("%f", &distance);
     printf("Расход бензина - ");
@@ -18,22 +18,23 @@ int main() {
     printf("Цена бензина - ");
     scanf_s("%f", &price);
 
-    float cost = (distance / 100.0f) * consumption * price;
-    printf("Стоимость путешествия при цене бензина %.2f составит %.2f рублей\n", price, cost);
+    float cost = (distance / 100.0f) * consumption * price; // считаем стоимость: расстояние делим на сто, умножаем на расход и на цену
+    printf("Стоимость путешествия при цене бензина %10.2f составит %10.2f рублей\n", price, cost); // выводим цену и стоимость с двумя знаками после запятой
 
-#else
-    cout << "cin cout Предполагаемое расстояние - ";
-    cin >> distance;
-    cout << "Расход бензина - ";
-    cin >> consumption;
-    cout << "Цена бензина - ";
-    cin >> price;
+#else                        // если макрос swagakruto не определён — компилируется этот блок
+    cout << "cin cout Предполагаемое расстояние - "; 
+    cin >> distance;                                 
+    cout << "Расход бензина - ";                     
+    cin >> consumption;                              
+    cout << "Цена бензина - ";                       
+    cin >> price;                                    
 
-    float cost = (distance / 100.0f) * consumption * price;
-    cout << "Стоимость путешествия при цене бензина "
-        << fixed << setprecision(2) << price
-        << " рублей составит " << cost << " рублей" << endl;
-#endif
-    system("pause");
-    return 0;
+    float cost = (distance / 100.0f) * consumption * price; // считаем стоимость путешествия
+    cout << "Стоимость путешествия при цене бензина " // выводим первую часть сообщения
+        <<fixed<< setprecision(2) << price          // включаем фиксированный формат и два знака после запятой для цены
+        << " рублей составит " << cost << " рублей" << endl; // выводим стоимость и переводим строку
+#endif                       // конец условной компиляции
+
+    system("pause");         // ставим паузу, чтобы окно консоли не закрылось сразу
+    return 0;                // возвращаем ноль — программа завершилась успешно
 }
