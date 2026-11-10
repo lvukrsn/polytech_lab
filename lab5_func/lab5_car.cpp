@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <locale>
 
-float calc_sum(float distance, float consumption, float price);
 
 using namespace std; // Чтобы не писать std::cin и std::cout
 float calc_sum(float distance, float consumption, float price) { // функции лучше быть float чем int
