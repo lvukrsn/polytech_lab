@@ -29,7 +29,7 @@ int main()
 
 	int* maxCols = new int[N];									// массив для хранения максимальных элементов по столбцам
 	for (int i = 0;i < N;i++) {
-		int maxVal = matrix[i][0];								// инициализация максимального элемента
+		int maxVal = matrix[i][0];								// нахождение максимального элемента
 		int maxCol = 0;
 		for (int j = 0;j < N;j++) {
 			if (matrix[i][j] > maxVal) {						
