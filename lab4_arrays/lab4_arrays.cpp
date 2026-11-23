@@ -51,15 +51,7 @@ int main()
 		}
 		minRows[j] = minRow;
 	}
-	//std::cout << "\nmaxCols --- ";							для отладки - вывод maxCols
-	//for (int i = 0;i < N;i++) {
-	//	std::cout << maxCols[i] << " ";
-	//}
 
-	//std::cout << "\nminRows --- ";							для отладки - вывод minrows
-	//for (int j = 0; j < N;j++) {
-	//	std::cout << minRows[j] << " ";
-	//}
 	int* minVals = new int[N];									//промежуточные переменные minVals и maxRows
 	int* maxVals = new int[N];
 	for (int i = 0;i < N; i++) {
