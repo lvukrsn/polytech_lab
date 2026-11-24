@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="lab6_2arrays_avgVal.vcxproj" />
+  <Project Path="lab6_2arrays_avgVal.vcxproj" Id="9b514a3e-85f9-4509-988f-db8bf9d1ee79" />
 </Solution>
